@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smarthome Interface</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/styles/style-house.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="/img/header-logo.png" alt="header logo">
+                <span>DOOR RFID</span>
+            </div>
+            
+            <div class="content">
+                <div class="menu-logo"></div>
+            </div>
+            
+            <div class="room-content">  
+                <div class="controller">
+                    
+                    <div class="devices-controller">
+                        <img src="/img/DOOR_CLOSE.png" alt="" id="house-lock" loop = none>
+                        <div>
+                            <span>Digital Door</span>
+                            <label class="switch">
+                                <input type="checkbox" id="digital-door-checkbox">
+                                <span class="slider round" onclick="changeImage()" id="door-click"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="para">
+                    <p style="font-size: 30px; font-weight: 800;">UID Valid</p>
+                    <button id="toggleButton">Add RFID Card</button>
+                    <div id="CardValid"></div>
+                    
+                </div>
+                 
+                <div class="information">
+                    <p style="font-size: 30px; font-weight: 800;">HISTORY</p>
+                    <div id="HISTORYCard"></div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="name-box">
+                    <p>         MSSV:20119337 </p>
+                    <p>         MSSV:20119344 </p>
+                </div>
+                <div class="logo">
+                    <img class="logo-spk" title="spk-logo" src="/img/logo-spk.jpg" alt="logo-spk">
+                </div>
+            </div>
+        </div>
+    </body>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <script src="/scripts/house.js"></script>
+</html>
